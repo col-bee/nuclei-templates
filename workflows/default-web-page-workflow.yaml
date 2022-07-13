@@ -1,0 +1,37 @@
+id: default-web-page-workflow
+
+info:
+  name: Detect Default Web Pages
+  author: col-bee
+  description: A simple workflow that runs all nuclei templates for detecting default web pages on a target list.
+
+workflows:
+  - template: technologies/default-django-page.yaml
+  - template: technologies/default-page-azure-container.yaml
+  - template: technologies/default-plesk-page.yaml
+  - template: technologies/default-ssltls-test-page.yaml
+  - template: technologies/default-codeigniter-page.yaml
+  - template: technologies/microsoft/default-windows-server-page.yaml
+  - template: technologies/microsoft/default-microsoft-azure-page.yaml
+  - template: technologies/microsoft/default-iis7-page.yaml
+  - template: technologies/default-payara-server-page.yaml
+  - template: technologies/default-movable-page.yaml
+  - template: technologies/apache/default-apache-test-page.yaml
+  - template: technologies/apache/default-apache2-ubuntu-page.yaml
+  - template: technologies/apache/default-apache2-page.yaml
+  - template: technologies/apache/xampp-default-page.yaml
+  - template: technologies/default-fedora-page.yaml
+  - template: technologies/default-fastcgi-page.yaml
+  - template: technologies/default-lucee-page.yaml
+  - template: technologies/oracle/default-oracle-application-page.yaml
+  - template: technologies/default-asp-net-page.yaml
+  - template: technologies/default-sitecore-page.yaml
+  - template: technologies/default-centos-test-page.yaml
+  - template: technologies/swag-instance-default-page.yaml
+  - template: technologies/default-glassfish-server-page.yaml
+  - template: technologies/default-lighttpd-page.yaml
+  - template: technologies/nginx/default-nginx-page.yaml
+  - template: technologies/operations-automation-default-page.yaml
+  - template: technologies/default-redhat-test-page.yaml
+  - template: technologies/default-jetty-page.yaml
+

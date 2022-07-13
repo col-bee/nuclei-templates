@@ -1,0 +1,23 @@
+id: patatata-http-verb-tampering
+
+info:
+  name: Detect Use of PATATATA (Invalid HTTP METHOD)
+  author: col-bee
+  severity: info
+  description: Implementing this HTTP method may cause the webserver to respond in ways not anticipated by developers.
+  reference:
+    - https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/07-Input_Validation_Testing/03-Testing_for_HTTP_Verb_Tampering
+  tags: misconfig,generic,verbs,methods
+
+requests:
+  - raw:
+      - |
+        PATATATA / HTTP/1.1
+        Host: {{Hostname}}
+
+    matchers:
+      - type: status
+        status:
+          - 405 #Method Not Allowed
+          - 501 #Not Implemented
+        negative: true

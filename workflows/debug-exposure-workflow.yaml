@@ -1,0 +1,33 @@
+id: debug-exposure-workflow
+
+info:
+  name: Detect Debug Exposure
+  author: col-bee
+  description: A simple workflow that runs all nuclei templates for detecting debug exposure on a target list.
+
+workflows:
+  - template: misconfiguration/sitecore-debug-page.yaml
+  - template: misconfiguration/airflow/airflow-debug.yaml
+  - template: misconfiguration/aspx-debug-mode.yaml
+  - template: misconfiguration/laravel-debug-enabled.yaml
+  - template: misconfiguration/django-debug-detect.yaml
+  - template: misconfiguration/symfony-debugmode.yaml
+  - template: misconfiguration/android-debug-database-exposed.yaml
+  - template: misconfiguration/browserless-debugger.yaml
+  - template: misconfiguration/wamp-xdebug-detect.yaml
+  - template: misconfiguration/laravel-debug-error.yaml
+  - template: technologies/werkzeug-debugger-detect.yaml
+  - template: technologies/samsung-smarttv-debug.yaml
+  - template: exposures/configs/yii-debugger.yaml
+  - template: exposures/configs/debug-vars.yaml
+  - template: exposures/logs/struts-debug-mode.yaml
+  - template: exposures/logs/pyramid-debug-toolbar.yaml
+  - template: exposures/logs/php-debug-bar.yaml
+  - template: exposures/logs/jboss-seam-debug-page.yaml
+  - template: exposures/logs/rails-debug-mode.yaml
+  - template: exposures/logs/django-debug-exposure.yaml
+  - template: file/audit/cisco/configure-service-timestamps-debug.yaml
+  - template: file/android/debug-enabled.yaml
+  - template: vulnerabilities/other/coldfusion-debug-xss.yaml
+  - template: vulnerabilities/wordpress/wordpress-debug-log.yaml
+

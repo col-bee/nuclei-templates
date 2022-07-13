@@ -1,0 +1,28 @@
+id: x-drupal-dynamic-cache
+
+info:
+  name: Detect X-Drupal-Dynamic-Cache
+  author: col-bee
+  severity: info
+  description: Including this header can reveal unecessary information to users.
+  reference:
+    - https://www.veggiespam.com/bad-headers/
+  tags: misconfig,headers
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    matchers-condition:
+    matchers:
+
+      - type: regex
+        part: header
+        regex:
+          - "(?i)X-Drupal-Dynamic-Cache:"
+       
+    extractors:
+      - type: kval
+        kval:
+          - "X_Drupal_Dynamic_Cache"

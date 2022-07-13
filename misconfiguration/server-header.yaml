@@ -1,0 +1,28 @@
+id: server
+
+info:
+  name: Detect Server
+  author: col-bee
+  severity: info
+  description: Including this header can reveal unecessary information to users.
+  reference:
+    - https://www.veggiespam.com/bad-headers/
+  tags: misconfig,headers
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    matchers-condition:
+    matchers:
+
+      - type: regex
+        part: header
+        regex:
+          - "(?i)Server:"
+       
+    extractors:
+      - type: kval
+        kval:
+          - "Server"

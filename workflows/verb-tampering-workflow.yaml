@@ -1,0 +1,22 @@
+id: verb-tampering-workflow
+
+info:
+  name: HTTP Verb Tampering
+  author: col-bee
+  description: A simple workflow that runs all nuclei templates for non-destructive HTTP verbs on a target list.
+
+workflows:
+  - template: miscellaneous/connect-verb-tampering.yaml
+  - template: miscellaneous/head-verb-tampering.yaml
+  - template: miscellaneous/options-method.yaml
+  - template: miscellaneous/patatata-verb-tampering.yaml
+  - template: miscellaneous/trace-method.yaml
+
+
+
+
+
+
+
+
+

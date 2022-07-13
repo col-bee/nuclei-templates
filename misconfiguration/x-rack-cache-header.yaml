@@ -1,0 +1,28 @@
+id: x-rack-cache
+
+info:
+  name: Detect X-Rack-Cache
+  author: col-bee
+  severity: info
+  description: Including this header can reveal unecessary information to users.
+  reference:
+    - https://www.veggiespam.com/bad-headers/
+  tags: misconfig,headers
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    matchers-condition:
+    matchers:
+
+      - type: regex
+        part: header
+        regex:
+          - "(?i)X-Rack-Cache:"
+       
+    extractors:
+      - type: kval
+        kval:
+          - "X_Rack_Cache"

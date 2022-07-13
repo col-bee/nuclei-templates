@@ -1,0 +1,18 @@
+id: insecure-server-headers-workflow
+
+info:
+  name: Detect Insecure Server Headers
+  author: col-bee
+  description: A simple workflow that runs all nuclei templates to detect insecure server headers on a target list.
+
+workflows:
+  - template: misconfiguration/server-header.yaml
+  - template: misconfiguration/x-aspnetmvc-version-header.yaml
+  - template: misconfiguration/x-aspnet-version-header.yaml
+  - template: misconfiguration/x-drupal-cache-header.yaml
+  - template: misconfiguration/x-drupal-dynamic-cache-header.yaml
+  - template: misconfiguration/x-generator-header.yaml
+  - template: misconfiguration/x-powered-by-header.yaml
+  - template: misconfiguration/x-rack-cache-header.yaml
+  - template: misconfiguration/x-runtime-header.yaml
+
